@@ -107,4 +107,33 @@ nano .env
 
 # 5. Run the bot
 python bot.py
-    
+```
+
+<a id="command-reference"></a>
+## 🛠 Command Reference
+
+| Command | Scope | Access Level | Description |
+| :--- | :--- | :--- | :--- |
+| `/start` | Private / Group | Public | Displays welcome message and support routing buttons. |
+| `/help` | Private / Group | Public | Returns complete usage guide and workflow rules. |
+| `/config` | Group Only | Admins | Opens inline menu to switch punishment mode (**MUTE/BAN**) and adjust warn limits. |
+| `/free` | Group Only | Admins | Whitelists target user by reply, username, or Telegram User ID. |
+| `/unfree` | Group Only | Admins | Removes target user from the whitelist. |
+| `/freelist` | Group Only | Admins | Lists all currently whitelisted entities in the group. |
+| `/update` | Private / Group | Bot Owner | Pulls latest Git commits and performs an automated process restart. |
+ 
+
+<a id="maintainer-author"></a>
+## 👨‍💻 Maintainer & Author
+
+<div align="center">
+
+Engineered and maintained by:
+
+### **Blaze | Max**
+
+*Enterprise Bot Architecture • Telegram Platform Specialist*
+
+[![Telegram](https://img.shields.io/badge/Telegram-Contact-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/BeMySugarBaby)
+
+</div>
