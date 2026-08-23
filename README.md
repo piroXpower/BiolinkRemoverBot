@@ -69,6 +69,7 @@ When an unrestricted user posts a message inside a protected group, the bot asyn
      │ with Inline Admin Callbacks │           │ (Restrict / Ban Member)     │
      └─────────────────────────────┘           └─────────────────────────────┘
 
+```
 <a id="key-capabilities"></a>
 ## ⚡ Key Capabilities
 
