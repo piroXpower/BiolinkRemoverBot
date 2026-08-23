@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ BioLink Protector Bot
+# 🛡️ BioLink Remover Bot
 
 **An enterprise-grade, asynchronous Telegram group moderation suite engineered with Pyrogram v2 to automatically mitigate bio-link spam, enforce progressive warn limits, and maintain group integrity.**
 
@@ -68,4 +68,42 @@ When an unrestricted user posts a message inside a protected group, the bot asyn
      │ Dispatch Warn Message       │           │ Trigger Sanction            │
      │ with Inline Admin Callbacks │           │ (Restrict / Ban Member)     │
      └─────────────────────────────┘           └─────────────────────────────┘
-     
+
+<a id="key-capabilities"></a>
+## ⚡ Key Capabilities
+
+* **Sub-Millisecond Bio Inspection:** Asynchronously inspects message senders' full profiles and parses bio metadata without blocking MTProto event pipelines.
+* **Aggressive URL Filtering:** Detects explicit protocols (`http://`, `https://`), standard/custom TLDs (`.xyz`, `.top`, `.online`, `.app`), and Telegram deep links (`t.me/*`).
+* **Progressive Multi-Tier Warning System:** Configurable infraction limits (1–5) per group, retaining persistent violation counters.
+* **Configurable Enforcement Policy:** Allows administrators to switch between temporary/indefinite **Mute** (`ChatPermissions`) and permanent **Ban** (`ban_chat_member`).
+* **Interactive Inline Admin Actions:** Warning alerts include one-click inline buttons for resetting user warns or whitelisting trusted accounts instantly.
+* **Zero-Downtime Hot-Reload:** Features an in-chat `/update` command that pulls changes from the Git remote and executes an in-memory process reload.
+* **Containerized Ready:** Fully containerized setup supporting persistent JSON storage via Docker volumes.
+
+---
+
+<a id="deployment-guide"></a>
+## 🚀 Deployment Guide
+
+### Option 1: Native Host Process
+
+```bash
+# 1. Clone repository
+git clone [https://github.com/yourusername/BiolinkRemoverBot.git](https://github.com/yourusername/BiolinkRemoverBot.git)
+cd BiolinkRemoverBot
+
+# 2. Set up virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# 3. Install requirements
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# 4. Configure environment variables
+cp .env.example .env
+nano .env
+
+# 5. Run the bot
+python bot.py
+    
